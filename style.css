@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&display=swap');
+
+* { /*standaardinstellingen voor alle elementen*/
+    font-family: 'Annapurna SIL', serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+* p {
+    line-height: 1.2;
+}
+
+/*begin header*/
+
+body {
+    height: 100%;
+}
+
+header {
+    height: 16vh;
+    min-height: 50px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#header h1 {
+    font-size: 1.6rem;
+}
+
+.header_logo {
+    width: 100%;
+    padding: 10px;
+}
+
+.header_menu {
+    display: none;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.header_home {
+    display: none;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#header_home_index {
+    display: none;
+}
+
+.header_landen {
+    /* home-pagina */
+    display: none;
+    height: 100%;
+    align-items: center;
+}
+
+.dropdown_menu {
+    display: none;
+    position: relative;
+}
+
+.dropdown_lijst { /*overlay onder dropdown_knop*/
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: whitesmoke;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    gap: 10px;
+    opacity: 0.1;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown_knop {
+    margin: 0;
+    cursor: pointer; /*zorgt ervoor dat de cursor verandert, opgezocht hoe dit moet*/
+}
+
+.dropdown_menu:hover .dropdown_lijst {
+    display: flex;
+    opacity: 1;
+}
+
+/*einde header*/
+
+/*begin body*/
+
+/*algemeen*/
+
+#inhoud {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 15px 10px;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+/*eindig algemeen*/
+/*begin index, gemaakt door cas*/
+
+.land_index {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.titel_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 80vw;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 20px;
+    background-blend-mode: darken; /* zwarte achtergrond werkte niet, opgezocht hoe dit wel zou werken */
+    transition: background-color 1s ease 0.3s;
+}
+
+.titel_index:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#bg_duitsland { /* donkere afbeelding dus lichter dan frankrijk en roemenië */
+    background-color: rgba(0, 0, 0, 0.40);
+    transition: background-color 1s ease 0.3s;
+}
+
+#bg_duitsland:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.naam_index {
+    color: white;
+}
+
+/*al de komende bg-images zijn gratis zonder copyright te gebruiken, maar ik heb toch in de code de link vermeld*/
+#bg_frankrijk {
+    background-image: url("resources/frankrijk.jpg"); /* Photo by <a href="https://unsplash.com/@guiguiblitz?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Guillaume Coué</a> on <a href="https://unsplash.com/photos/green-pine-trees-on-rocky-ground-during-daytime-Lb5nEgPF6Pc?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> */
+}
+
+#bg_roemenie {
+    background-image: url("resources/roemenie.jpg"); /* Photo by <a href="https://unsplash.com/@sergiuig?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sergiu Gabriel</a> on <a href="https://unsplash.com/photos/mountain-ranges-Gzms5hGzRSo?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> */
+}
+
+#bg_duitsland {
+    background-image: url("resources/duitsland.jpg"); /* Photo by <a href="https://unsplash.com/@seru94?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Rück</a> on <a href="https://unsplash.com/photos/green-pine-trees-on-mountain-during-daytime-M2s9xVcP-q8?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> */
+}
+
+/*einde index */
+/*begin informatie pagina, gemaakt door max */
+
+#land {
+    margin: 5px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Voegt een schaduw toe aan de buitenkant van het element */
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.mineraal {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    color: white;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Voegt een schaduw toe aan de buitenkant van het element */
+}
+
+.land_naam {
+    font-size: 1.6rem;
+}
+
+.samenvatting_land {
+    font-size: 1.1rem;
+    padding: 5px;
+    color: black;
+}
+
+.mineraal_naam{
+    position: relative;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.642);
+}
+
+.plaatje_mineraal {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vw;
+    width: auto;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px 20px 0 0; /* Zorgt ervoor dat de bovenste hoeken van het element afgerond zijn */
+    overflow: hidden; /* Zorgt ervoor dat de achtergrond kleur niet buiten het element komt */
+}
+
+.copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    color: white;
+    font-size: 0.8rem;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-transform: uppercase; /*gezien op de National Geographic site*/
+}
+
+.copyright a {
+    color: white;
+    text-decoration: none;
+}
+
+.mineraal_samenvatting {
+    position: relative;
+    background: transparent;
+    color: black;
+    padding: 10px; 
+    z-index: 1;
+    background-color: whitesmoke;
+    border-radius: 0 0 20px 20px; /* Zorgt ervoor dat de onderste hoeken van het element afgerond zijn */
+}
+
+/*de volgende plaatjes hebben copyright, maar de juiste verwijzingen staan op de site. de bron is wikimedia commons*/
+
+#plaatje_mineraal_1_fr { 
+    background-image: url(resources/fluoriet.jpg);
+}
+
+#plaatje_mineraal_2_fr { 
+    background-image: url(resources/quartz.jpg);
+}
+
+#plaatje_mineraal_3_fr { 
+    background-image: url(resources/azuriet.png);
+}
+
+#plaatje_mineraal_1_ro { 
+    background-image: url(resources/goud.jpg);
+}
+
+#plaatje_mineraal_2_ro { 
+    background-image: url(resources/rhodochrosiet.jpg);
+}
+
+#plaatje_mineraal_3_ro { 
+    background-image: url(resources/pyriet.jpg);
+}
+
+#plaatje_mineraal_1_de {
+    background-image: url(resources/bariet.jpg);
+}
+
+#plaatje_mineraal_2_de { 
+    background-image: url(resources/topaz.jpg);
+}
+
+#plaatje_mineraal_3_de { 
+    background-image: url(resources/smoky_quartz.jpg);
+}
+
+/*einde informtie pagina*/
+
+/* einde body */
+
+/* begin footer */
+
+#footer {
+    background-color: whitesmoke;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer_logo {
+    order: 1;
+    flex: 0 2 200px;
+    min-width: 0;
+    height: auto;
+}
+
+.footer_home {
+    order: 2;
+    flex-shrink: 0;
+}
+
+.footer_landen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-shrink: 1;
+    order: 3;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* einde footer */
+
+/* overig en media queries */
+
+.geen_decoration { /* Zorgt ervoor dat de link geen onderstreping heeft en de kleur overneemt van de tekst, opgezocht hoe dit moet */
+    text-decoration: none;
+    color: inherit; 
+}
+
+@media only screen and (min-width: 220px) {
+
+    .header_menu {
+        display: flex;
+    }
+
+    .header_home {
+        display: flex;
+    }
+
+    .dropdown_menu {
+        display: flex;
+    }
+
+    .header_logo {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 320px) {
+
+    #header h1 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 500px) {
+
+    #header_home_index {
+        display: none;
+    }
+
+    .dropdown_menu {
+        display: none;
+    }
+
+    .header_landen {
+        display: flex;
+    }
+
+    #inhoud {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .land_index {
+        flex-direction: row;
+    }
+
+    .titel_index {
+        width: 45vw;
+        height: 45vw;
+    }
+
+    #land {
+        width: 100%;
+    }
+
+    .mineraal {
+        width: calc(33.33% - 14px); /* Zorgt ervoor dat er 3 elementen naast elkaar passen met een kleine marge ertussen, opgezocht hoe dit moet */
+    }
+
+    .copyright {
+        display: none;
+    }
+
+    .plaatje_mineraal:hover .copyright {
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 650px) {
+
+    .land_index p {
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    .land_index p {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    #header_home_index {
+        display: flex;
+    }
+
+}
